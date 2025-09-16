@@ -1,0 +1,86 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background-color:azure;
+}
+
+.container-fluid {
+    width: 99%;
+    height:10%;
+    margin: auto;
+    border-radius: 5px;
+
+}
+
+.header {
+    width: 80%;
+    height:100px;
+    margin: auto;
+    border-radius: 25px;
+
+}
+
+.TaskDone p {
+    font-weight:bold;
+}
+
+.TaskNotDone p {
+    font-weight: bold;
+    color: green;
+    text-decoration: line-through
+}
+
+td {
+    word-wrap: break-word; /* Break long words */
+    white-space: normal; /* Allow text to wrap */
+}
+
+table {
+    table-layout: fixed; /* Prevents cells from stretching */
+    background-color:azure;
+}
+
+.navbar {
+    border-radius: 1em;
+}
+
+.short-time{
+    color:orange;
+}
+
+.no-time {
+    color: red;
+}
+
+.long-time {
+}
+
+
+
+th:hover {
+    cursor: pointer;
+}
+
+h1{
+    background: linear-gradient(to right,purple,orange);
+    background-clip: text;
+    color:transparent;
+}

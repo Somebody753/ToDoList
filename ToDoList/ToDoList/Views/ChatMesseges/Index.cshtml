@@ -1,0 +1,28 @@
+﻿@using System.Globalization
+@model IEnumerable<ToDoList.Models.ChatMessage>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<h2>Chat History</h2>
+
+<ul>
+    @foreach (var msg in Model)
+    {
+        <li>
+            <strong>@msg.AuthorName</strong> (@msg.Timestamp.ToString("dd.MM.yyyy HH:mm")):
+            @msg.MessageText
+        </li>
+    }
+</ul>
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+

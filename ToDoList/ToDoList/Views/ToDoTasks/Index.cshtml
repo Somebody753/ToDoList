@@ -1,0 +1,167 @@
+﻿@using System.Globalization
+@model IEnumerable<ToDoList.Models.ToDoTask>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<h1>Your things to do</h1>
+
+<table class="table table-striped " id="taskTable">
+    <thead>
+        <tr>
+            <th onclick="sortTable(0)">Name</th>
+            <th onclick="sortTable(1)">Details</th>
+            <th onclick="sortTable(1)">Deadline</th>
+
+            <th class="buttons">
+                <form asp-action="Create" method="get" style="display:inline">
+                    <input type="hidden"  />
+                    <button type="submit" class="btn btn-outline-primary">
+                    ➕ Create new task
+                    </button>
+                </form>
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        
+            <tr class="@(item.TaskDone ? "TaskNotDone" : "TaskDone")">
+           
+            <td >
+                    <p>@Html.DisplayFor(modelItem => item.TaskName)</p>
+                
+            </td>
+            <td>
+                    <p>@Html.DisplayFor(modelItem => item.TaskDetails)</p>
+            </td>
+
+                <td class="@(((TimeSpan)(DateTime.ParseExact(item.DeadlineDate, "yyyy-MM-dd", CultureInfo.InvariantCulture) - DateTime.Now)).Days switch{
+                >= 3 => "long-time",
+                >= 1 => "short-time",
+                _ => "no-time"}) ">
+                    <p>@Html.DisplayFor(modelItem => item.DeadlineDate)</p>
+                </td>
+
+
+            <td>
+                    
+                    
+
+                    <form asp-action="Edit" method="get" style="display:inline">
+                        <input type="hidden" name="id" value="@item.Id" />
+                        <button type="submit" class="btn btn-outline-dark">
+                            Edit
+                        </button>
+                    </form>
+
+
+
+                    <form asp-action="ToggleDone" method="post" style="display:inline">
+                        <input type="hidden" name="id" value="@item.Id" />
+                        <button type="submit" class="btn @(item.TaskDone ? "btn-success" : "btn-outline-success")">
+                            ✔
+                        </button>
+                    </form>
+
+
+
+                    <form asp-action="Delete" method="post" style="display:inline">
+                        <input type="hidden" name="id" value="@item.Id" />
+                        <button type="submit" class="btn btn-danger" )">
+                            🗑️
+                        </button>
+                    </form>
+
+                    
+           
+                    
+
+  
+
+
+                    
+
+
+
+
+
+
+                   
+            </td>
+                
+
+            </tr>
+
+}
+    </tbody>
+</table>
+
+
+<script>
+    function sortTable(n) {
+      var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+      table = document.getElementById("taskTable");
+      switching = true;
+
+      dir = "asc";
+
+      while (switching) 
+      {
+        switching = false;
+        rows = table.rows;
+
+        for (i = 1; i < (rows.length - 1); i++) 
+        {
+
+          shouldSwitch = false;
+
+          x = rows[i].getElementsByTagName("TD")[n];
+          y = rows[i + 1].getElementsByTagName("TD")[n];
+
+          if (dir == "asc") {
+            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+
+              shouldSwitch= true;
+              break;
+            }
+          } else if (dir == "desc") {
+            if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+
+              shouldSwitch = true;
+              break;
+            }
+          }
+        }
+
+
+
+
+        if (shouldSwitch) {
+
+          rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+          switching = true;
+
+          switchcount ++;
+        } else {
+
+          if (switchcount == 0 && dir == "asc") {
+            dir = "desc";
+            switching = true;
+          }
+        }
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+
+</script>
