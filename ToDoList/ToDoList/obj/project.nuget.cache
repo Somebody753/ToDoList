@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "884bprDI8k8=",
+  "dgSpecHash": "16hfOagpDm0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\damia\\Desktop\\1\\ToDOList\\ToDoList\\ToDoList.csproj",
+  "projectFilePath": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\ToDoList.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\damia\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\damia\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

@@ -37,10 +37,13 @@
                     <p>@Html.DisplayFor(modelItem => item.TaskDetails)</p>
             </td>
 
-                <td class="@(((TimeSpan)(DateTime.ParseExact(item.DeadlineDate, "yyyy-MM-dd", CultureInfo.InvariantCulture) - DateTime.Now)).Days switch{
-                >= 3 => "long-time",
-                >= 1 => "short-time",
+                <td class="@(((TimeSpan) (item.DeadlineDate - DateTime.Now)).Days switch{
+                >= 1 => "long-time",
+                >= 0 => "short-time",
                 _ => "no-time"}) ">
+
+
+                    
                     <p>@Html.DisplayFor(modelItem => item.DeadlineDate)</p>
                 </td>
 

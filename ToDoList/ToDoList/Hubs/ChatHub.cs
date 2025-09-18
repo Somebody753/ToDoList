@@ -5,6 +5,8 @@ using System.Security.Claims;
 using ToDoList.Data;
 using ToDoList.Models;
 
+
+
 namespace ToDoList.Hubs
 {
     
@@ -24,10 +26,14 @@ namespace ToDoList.Hubs
         {
             var userId = Context.User?.FindFirstValue(ClaimTypes.NameIdentifier);
             var userName = Context.User?.Identity?.Name;
+            var user = Context.User;
+            
+            
 
             var chatMessage = new ChatMessage
             {
                 AuthorName = userName,
+                AuthorId = userId,
                 MessageText = message,
                 Timestamp = DateTime.UtcNow
             };

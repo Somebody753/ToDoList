@@ -1,4 +1,6 @@
-﻿namespace ToDoList.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ToDoList.Models
 {
     public class ToDoTask
     {
@@ -7,7 +9,10 @@
         public string TaskDetails { get; set; }
         public bool TaskDone { get; set; }
         public string? UserId { get; set; }
-        public string DeadlineDate { get; set; }
+
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd.MM.yyyy}", ApplyFormatInEditMode = true)]
+        public DateTime DeadlineDate { get; set; }
 
 
 
