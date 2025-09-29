@@ -185,7 +185,6 @@ namespace ToDoList.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> JoinGroup(string id)
         {
-            System.Diagnostics.Debug.WriteLine("iiiiiiii");
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
             bool isMember = await _context.GroupUser

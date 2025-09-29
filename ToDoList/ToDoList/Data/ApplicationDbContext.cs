@@ -13,7 +13,7 @@ namespace ToDoList.Data
 
 
         public DbSet<ToDoList.Models.ToDoTask> ToDoTask { get; set; } = default!;
-        public DbSet<ToDoList.Models.ChatMessage> ChatMessages { get; set; }
+        public DbSet<ToDoList.Models.ChatMessage> ChatMessages { get; set; } = default!;
         public DbSet<ToDoList.Models.ChatGroup> ChatGroup { get; set; } = default!;
         public DbSet<ToDoList.Models.GroupUser> GroupUser { get; set; } = default!;
 
@@ -36,6 +36,21 @@ namespace ToDoList.Data
                 .HasOne(gu => gu.ChatGroup)
                 .WithMany(g => g.GroupUsers)
                 .HasForeignKey(gu => gu.ChatGroupId);
+
+            //ChatMessage Relations
+
+            builder.Entity<ChatMessage>()
+                .HasOne(gu => gu.Author)
+                .WithMany(u => u.ChatMessages)
+                .HasForeignKey(gu => gu.AuthorId);
+
+            builder.Entity<ChatMessage>()
+                .HasOne(gu => gu.Group)
+                .WithMany(g => g.ChatMessages)
+                .HasForeignKey(gu => gu.GroupId);
+
+
+
 
         }
 

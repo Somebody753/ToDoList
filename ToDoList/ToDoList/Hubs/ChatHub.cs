@@ -24,15 +24,16 @@ namespace ToDoList.Hubs
         [Authorize]
         public async Task SendMessage(string message)
         {
+
             var userId = Context.User?.FindFirstValue(ClaimTypes.NameIdentifier);
             var userName = Context.User?.Identity?.Name;
-            
-            
+
+
 
             var chatMessage = new ChatMessage
             {
-                AuthorName = userName,
                 AuthorId = userId,
+                GroupId = "8e74ce1c-6661-4239-b7fb-c14decaed0e6",
                 MessageText = message,
                 Timestamp = DateTime.UtcNow,
             };
