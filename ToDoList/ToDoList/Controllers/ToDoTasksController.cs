@@ -208,7 +208,7 @@ namespace ToDoList.Controllers
         [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> ToggleDone(int id)
+        public async Task<IActionResult> ToggleDone(int? id)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 

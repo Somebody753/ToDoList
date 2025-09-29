@@ -11,8 +11,12 @@ namespace ToDoList.Models
         public DateTime Timestamp { get; set; }
 
         public string AuthorId { get; set; }
-        public IdentityUser Author { get; set; }
 
+        public ApplicationUser Author { get; set; }
+
+        public string GroupId { get; set; }
+
+        public ChatGroup Group { get; set; }
 
 
         public ChatMessage()

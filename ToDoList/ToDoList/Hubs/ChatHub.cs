@@ -26,7 +26,6 @@ namespace ToDoList.Hubs
         {
             var userId = Context.User?.FindFirstValue(ClaimTypes.NameIdentifier);
             var userName = Context.User?.Identity?.Name;
-            var user = Context.User;
             
             
 
@@ -35,7 +34,7 @@ namespace ToDoList.Hubs
                 AuthorName = userName,
                 AuthorId = userId,
                 MessageText = message,
-                Timestamp = DateTime.UtcNow
+                Timestamp = DateTime.UtcNow,
             };
 
             _context.ChatMessages.Add(chatMessage);
