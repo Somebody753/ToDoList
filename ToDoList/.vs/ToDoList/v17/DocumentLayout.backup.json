@@ -3,16 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A75E32F3-11B1-438C-BBDD-7D959FA7F33E}|ToDoList\\ToDoList.csproj|c:\\users\\damia\\documents\\github\\todolist\\todolist\\todolist\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A75E32F3-11B1-438C-BBDD-7D959FA7F33E}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A75E32F3-11B1-438C-BBDD-7D959FA7F33E}|ToDoList\\ToDoList.csproj|c:\\users\\damia\\documents\\github\\todolist\\todolist\\todolist\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A75E32F3-11B1-438C-BBDD-7D959FA7F33E}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A75E32F3-11B1-438C-BBDD-7D959FA7F33E}|ToDoList\\ToDoList.csproj|c:\\users\\damia\\documents\\github\\todolist\\todolist\\todolist\\models\\chatmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A75E32F3-11B1-438C-BBDD-7D959FA7F33E}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\models\\chatmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A75E32F3-11B1-438C-BBDD-7D959FA7F33E}|ToDoList\\ToDoList.csproj|c:\\users\\damia\\documents\\github\\todolist\\todolist\\todolist\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A75E32F3-11B1-438C-BBDD-7D959FA7F33E}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A75E32F3-11B1-438C-BBDD-7D959FA7F33E}|ToDoList\\ToDoList.csproj|c:\\users\\damia\\documents\\github\\todolist\\todolist\\todolist\\models\\chatgroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A75E32F3-11B1-438C-BBDD-7D959FA7F33E}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\models\\chatgroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A75E32F3-11B1-438C-BBDD-7D959FA7F33E}|ToDoList\\ToDoList.csproj|c:\\users\\damia\\documents\\github\\todolist\\todolist\\todolist\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A75E32F3-11B1-438C-BBDD-7D959FA7F33E}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A75E32F3-11B1-438C-BBDD-7D959FA7F33E}|ToDoList\\ToDoList.csproj|c:\\users\\damia\\documents\\github\\todolist\\todolist\\todolist\\views\\todotasks\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A75E32F3-11B1-438C-BBDD-7D959FA7F33E}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\views\\todotasks\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A75E32F3-11B1-438C-BBDD-7D959FA7F33E}|ToDoList\\ToDoList.csproj|c:\\users\\damia\\documents\\github\\todolist\\todolist\\todolist\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A75E32F3-11B1-438C-BBDD-7D959FA7F33E}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A75E32F3-11B1-438C-BBDD-7D959FA7F33E}|ToDoList\\ToDoList.csproj|c:\\users\\damia\\documents\\github\\todolist\\todolist\\todolist\\views\\chatgroups\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A75E32F3-11B1-438C-BBDD-7D959FA7F33E}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\views\\chatgroups\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A75E32F3-11B1-438C-BBDD-7D959FA7F33E}|ToDoList\\ToDoList.csproj|c:\\users\\damia\\documents\\github\\todolist\\todolist\\todolist\\controllers\\chatgroupscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A75E32F3-11B1-438C-BBDD-7D959FA7F33E}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\controllers\\chatgroupscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,46 +38,93 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ChatGroup.cs",
-              "DocumentMoniker": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\Models\\ChatGroup.cs",
-              "RelativeDocumentMoniker": "ToDoList\\Models\\ChatGroup.cs",
-              "ToolTip": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\Models\\ChatGroup.cs",
-              "RelativeToolTip": "ToDoList\\Models\\ChatGroup.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T18:53:44.398Z",
+              "DocumentIndex": 1,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "ToDoList\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeToolTip": "ToDoList\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-30T23:27:53.059Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ChatMessage.cs",
-              "DocumentMoniker": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\Models\\ChatMessage.cs",
-              "RelativeDocumentMoniker": "ToDoList\\Models\\ChatMessage.cs",
-              "ToolTip": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\Models\\ChatMessage.cs",
-              "RelativeToolTip": "ToDoList\\Models\\ChatMessage.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T18:52:36.427Z",
-              "EditorCaption": ""
+              "DocumentIndex": 2,
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "ToDoList\\Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "ToDoList\\Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-30T21:20:06.009Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\Views\\ToDoTasks\\Index.cshtml",
+              "RelativeDocumentMoniker": "ToDoList\\Views\\ToDoTasks\\Index.cshtml",
+              "ToolTip": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\Views\\ToDoTasks\\Index.cshtml",
+              "RelativeToolTip": "ToDoList\\Views\\ToDoTasks\\Index.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAHoAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-30T19:54:12.975Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "ToDoList\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "ToDoList\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAIwCEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T18:48:21.239Z",
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "ToDoList\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "ToDoList\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAByAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-30T15:32:19.493Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "ToDoList\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "ToDoList\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAF4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-09-30T15:31:09.664Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ChatGroupsController.cs",
+              "DocumentMoniker": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\Controllers\\ChatGroupsController.cs",
+              "RelativeDocumentMoniker": "ToDoList\\Controllers\\ChatGroupsController.cs",
+              "ToolTip": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\Controllers\\ChatGroupsController.cs",
+              "RelativeToolTip": "ToDoList\\Controllers\\ChatGroupsController.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAIwDQAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T22:42:59.632Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\Views\\ChatGroups\\Details.cshtml",
+              "RelativeDocumentMoniker": "ToDoList\\Views\\ChatGroups\\Details.cshtml",
+              "ToolTip": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\Views\\ChatGroups\\Details.cshtml",
+              "RelativeToolTip": "ToDoList\\Views\\ChatGroups\\Details.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-29T21:02:55.796Z"
             }
           ]
         }

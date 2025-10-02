@@ -11,19 +11,25 @@ connection.on("ReceiveMessage", function (user, message, date) {
     // We can assign user-supplied strings to an element's textContent because it
     // is not interpreted as markup. If you're assigning in any other way, you 
     // should be aware of possible script injection concerns.
-    li.textContent = `${date}  ${user}: ${message}`;
+    li.textContent = `${date}  ${user} ${message}`;
 });
 
 connection.start().then(function () {
     document.getElementById("sendButton").disabled = false;
+    connection.invoke("JoinGroup", groupId);
 }).catch(function (err) {
     return console.error(err.toString());
 });
 
+
+
 document.getElementById("sendButton").addEventListener("click", function (event) {
     
     var message = document.getElementById("messageInput").value;
-    connection.invoke("SendMessage", message).catch(function (err) {
+
+    var groupId = document.getElementById("groupId").value;
+
+    connection.invoke("SendMessage", message, groupId).catch(function (err) {
         return console.error(err.toString());
     });
     event.preventDefault();

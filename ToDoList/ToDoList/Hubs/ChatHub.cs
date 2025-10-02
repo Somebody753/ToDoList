@@ -21,19 +21,24 @@ namespace ToDoList.Hubs
         }
 
 
-        [Authorize]
-        public async Task SendMessage(string message)
+        public async Task JoinGroup(string groupId)
         {
+            await Groups.AddToGroupAsync(Context.ConnectionId, groupId);
+        }
+
+        [Authorize]
+        public async Task SendMessage(string message, string groupId)
+        {
+            await Groups.AddToGroupAsync(Context.ConnectionId, groupId);
+
 
             var userId = Context.User?.FindFirstValue(ClaimTypes.NameIdentifier);
             var userName = Context.User?.Identity?.Name;
 
-
-
             var chatMessage = new ChatMessage
             {
                 AuthorId = userId,
-                GroupId = "8e74ce1c-6661-4239-b7fb-c14decaed0e6",
+                GroupId = groupId,
                 MessageText = message,
                 Timestamp = DateTime.UtcNow,
             };
@@ -41,13 +46,10 @@ namespace ToDoList.Hubs
             _context.ChatMessages.Add(chatMessage);
             await _context.SaveChangesAsync();
 
+            //await Clients.All.SendAsync("ReceiveMessage", userName, message, DateTime.Now.ToString("HH:mm"));
+            await Clients.Group(groupId).SendAsync("ReceiveMessage", userName, message, DateTime.Now.ToString("HH:mm"));
 
 
-
-
-            
-            Clients.All.SendAsync("ReceiveMessage", userName, message, DateTime.Now.ToString("HH:mm"));
-            
         }
 
     }

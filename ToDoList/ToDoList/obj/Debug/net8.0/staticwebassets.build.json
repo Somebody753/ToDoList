@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "TMHscYiGFT5HxN5AWWHX4SMjqkgVf0n5arlr4h9iVjo=",
+  "Hash": "kE8wmwa3hy5WIyhrjCtO6VnXOznBBZrfABAM1zqNb2A=",
   "Source": "ToDoList",
   "BasePath": "_content/ToDoList",
   "Mode": "Default",
@@ -1333,8 +1333,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "fdrfocvsmo",
-      "Integrity": "rQ+2mh1I9TuJwW20zpbkyVBx9HMCCYJ5KgoJ04JpCIk=",
+      "Fingerprint": "k6gwvluyz7",
+      "Integrity": "7Gzo+L79BvgXsImXVTJHariv7spd8RoekoEzAILqz4I=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -1375,8 +1375,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "9a2l2sc9iy",
-      "Integrity": "0TArZxap/A4oFcJtRXNvZABI35v5pB7iMo6U4Z7sYD8=",
+      "Fingerprint": "sgc4zt9ref",
+      "Integrity": "HP9KVbG2vdplc7TI92RM0IvD1jEe+bFyHhsApzzlBxE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\chat.js"
@@ -2654,7 +2654,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1255"
+          "Value": "1330"
         },
         {
           "Name": "Content-Type",
@@ -2662,11 +2662,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"rQ+2mh1I9TuJwW20zpbkyVBx9HMCCYJ5KgoJ04JpCIk=\""
+          "Value": "\"7Gzo+L79BvgXsImXVTJHariv7spd8RoekoEzAILqz4I=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 03 Sep 2025 13:08:38 GMT"
+          "Value": "Tue, 30 Sep 2025 21:20:01 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2676,12 +2676,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-rQ+2mh1I9TuJwW20zpbkyVBx9HMCCYJ5KgoJ04JpCIk="
+          "Value": "sha256-7Gzo+L79BvgXsImXVTJHariv7spd8RoekoEzAILqz4I="
         }
       ]
     },
     {
-      "Route": "css/site.fdrfocvsmo.css",
+      "Route": "css/site.k6gwvluyz7.css",
       "AssetFile": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2691,7 +2691,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1255"
+          "Value": "1330"
         },
         {
           "Name": "Content-Type",
@@ -2699,11 +2699,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"rQ+2mh1I9TuJwW20zpbkyVBx9HMCCYJ5KgoJ04JpCIk=\""
+          "Value": "\"7Gzo+L79BvgXsImXVTJHariv7spd8RoekoEzAILqz4I=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 03 Sep 2025 13:08:38 GMT"
+          "Value": "Tue, 30 Sep 2025 21:20:01 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2713,7 +2713,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "fdrfocvsmo"
+          "Value": "k6gwvluyz7"
         },
         {
           "Name": "label",
@@ -2721,7 +2721,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-rQ+2mh1I9TuJwW20zpbkyVBx9HMCCYJ5KgoJ04JpCIk="
+          "Value": "sha256-7Gzo+L79BvgXsImXVTJHariv7spd8RoekoEzAILqz4I="
         }
       ]
     },
@@ -5028,51 +5028,6 @@
       ]
     },
     {
-      "Route": "js/chat.9a2l2sc9iy.js",
-      "AssetFile": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\wwwroot\\js\\chat.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1173"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"0TArZxap/A4oFcJtRXNvZABI35v5pB7iMo6U4Z7sYD8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 05 Sep 2025 21:38:58 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "9a2l2sc9iy"
-        },
-        {
-          "Name": "label",
-          "Value": "js/chat.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-0TArZxap/A4oFcJtRXNvZABI35v5pB7iMo6U4Z7sYD8="
-        }
-      ]
-    },
-    {
       "Route": "js/chat.js",
       "AssetFile": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\wwwroot\\js\\chat.js",
       "Selectors": [],
@@ -5083,7 +5038,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1173"
+          "Value": "1296"
         },
         {
           "Name": "Content-Type",
@@ -5091,11 +5046,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"0TArZxap/A4oFcJtRXNvZABI35v5pB7iMo6U4Z7sYD8=\""
+          "Value": "\"HP9KVbG2vdplc7TI92RM0IvD1jEe+bFyHhsApzzlBxE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 05 Sep 2025 21:38:58 GMT"
+          "Value": "Tue, 30 Sep 2025 12:00:35 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5105,7 +5060,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-0TArZxap/A4oFcJtRXNvZABI35v5pB7iMo6U4Z7sYD8="
+          "Value": "sha256-HP9KVbG2vdplc7TI92RM0IvD1jEe+bFyHhsApzzlBxE="
+        }
+      ]
+    },
+    {
+      "Route": "js/chat.sgc4zt9ref.js",
+      "AssetFile": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\wwwroot\\js\\chat.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1296"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HP9KVbG2vdplc7TI92RM0IvD1jEe+bFyHhsApzzlBxE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 30 Sep 2025 12:00:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sgc4zt9ref"
+        },
+        {
+          "Name": "label",
+          "Value": "js/chat.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-HP9KVbG2vdplc7TI92RM0IvD1jEe+bFyHhsApzzlBxE="
         }
       ]
     },
