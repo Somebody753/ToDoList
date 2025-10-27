@@ -24,11 +24,12 @@ namespace ToDoList.Controllers
         }
 
         // GET: ToDoTasks
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string chatgroupID)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            //chatgroupID = "f58528b2-82fe-484d-9197-53d5d13426a1";
             var tasks = await _context.ToDoTask
-                                      .Where(t => t.UserId == userId)
+                                      .Where(t => t.ChatGroupId == chatgroupID)
                                       .ToListAsync();
 
             tasks = tasks.OrderBy(t => t.DeadlineDate).ToList();
@@ -60,9 +61,13 @@ namespace ToDoList.Controllers
         // GET: ToDoTasks/Create
 
         [Authorize]
-        public IActionResult Create()
+        public IActionResult Create(string groupId)
         {
-            return View();
+            var task = new ToDoTask
+            {
+                ChatGroupId = groupId 
+            };
+            return View(task);
         }
 
         // POST: ToDoTasks/Create
@@ -71,17 +76,18 @@ namespace ToDoList.Controllers
         [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,TaskName,TaskDetails,TaskDone,DeadlineDate")] ToDoTask toDoTask)
+        public async Task<IActionResult> Create([Bind("Id,TaskName,TaskDetails,TaskDone,DeadlineDate")] ToDoTask toDoTask, string groupId)
         {
             if (ModelState.IsValid)
             {
                 var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
                 toDoTask.UserId = userId;
+                toDoTask.ChatGroupId = groupId;
 
 
                 _context.Add(toDoTask);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Chat", "ChatGroups", new { id = groupId });
             }
 
             if (!ModelState.IsValid)
@@ -92,7 +98,7 @@ namespace ToDoList.Controllers
                 }
             }
 
-            return View(toDoTask); 
+            return RedirectToAction("Chat", "ChatGroups", new { id = groupId });
         }
 
 
@@ -102,7 +108,7 @@ namespace ToDoList.Controllers
 
         // GET: ToDoTasks/Edit/5
         [Authorize]
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(int? id, string groupId)
         {
             if (id == null)
             {
@@ -110,15 +116,9 @@ namespace ToDoList.Controllers
             }
 
             var toDoTask = await _context.ToDoTask.FindAsync(id);
-            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             if (toDoTask == null)
             {
                 return NotFound();
-            }
-
-            if(userId != toDoTask.UserId)
-            {
-                return NotFound(); 
             }
 
             return View(toDoTask);
@@ -130,7 +130,7 @@ namespace ToDoList.Controllers
         [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,TaskName,TaskDetails,TaskDone,DeadlineDate")] ToDoTask toDoTask)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,TaskName,TaskDetails,TaskDone,DeadlineDate")] ToDoTask toDoTask,string groupId)
         {
             if (id != toDoTask.Id)
             {
@@ -143,6 +143,7 @@ namespace ToDoList.Controllers
                 {
                     var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
                     toDoTask.UserId = userId;
+                    toDoTask.ChatGroupId = groupId;
                     _context.Update(toDoTask);
                     await _context.SaveChangesAsync();
                 }
@@ -157,7 +158,7 @@ namespace ToDoList.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Chat", "ChatGroups", new { id = groupId });
             }
             return View(toDoTask);
         }
@@ -186,7 +187,7 @@ namespace ToDoList.Controllers
         [Authorize]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(int id, string groupId)
         {
             var toDoTask = await _context.ToDoTask.FindAsync(id);
             if (toDoTask != null)
@@ -195,7 +196,7 @@ namespace ToDoList.Controllers
             }
 
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("Chat", "ChatGroups", new { id = groupId });
         }
 
 
@@ -208,12 +209,12 @@ namespace ToDoList.Controllers
         [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> ToggleDone(int? id)
+        public async Task<IActionResult> ToggleDone(int? id, string groupId)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
             var task = await _context.ToDoTask
-                .FirstOrDefaultAsync(t => t.Id == id && t.UserId == userId);
+                .FirstOrDefaultAsync(t => t.Id == id);
 
             if (task == null)
             {
@@ -223,7 +224,7 @@ namespace ToDoList.Controllers
             task.TaskDone = !task.TaskDone; // flip the status
             await _context.SaveChangesAsync();
 
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("Chat", "ChatGroups", new { id = groupId });
         }
 
 

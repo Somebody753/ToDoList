@@ -14,7 +14,8 @@ namespace ToDoList.Models
         [DisplayFormat(DataFormatString = "{0:dd.MM.yyyy}", ApplyFormatInEditMode = true)]
         public DateTime DeadlineDate { get; set; }
 
-
+        public string? ChatGroupId { get; set; }
+        public ChatGroup? ChatGroup { get; set; }
 
         public ToDoTask()
         {

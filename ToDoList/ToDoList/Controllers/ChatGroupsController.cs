@@ -25,18 +25,19 @@ namespace ToDoList.Controllers
         [Authorize]
         public async Task<IActionResult> Index()
         {
-            return View(await _context.ChatGroup.ToListAsync());
+            var groups = _context.ChatGroup
+            .Include(g => g.GroupUsers) // load users
+            .ToList();
+
+            return View(groups);
         }
 
 
 
 
-
-
-
-        // GET: ChatGroups/Details/5
+        // GET: ChatGroups/Chat/5
         [Authorize]
-        public async Task<IActionResult> Details(string id)
+        public async Task<IActionResult> Chat(string id)
         {
             if (id == null)
             {
@@ -44,6 +45,7 @@ namespace ToDoList.Controllers
             }
 
             var chatGroup = await _context.ChatGroup
+                .Include(g => g.ToDoTasks)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (chatGroup == null)
             {
@@ -52,6 +54,17 @@ namespace ToDoList.Controllers
 
             return View(chatGroup);
         }
+
+
+
+
+
+
+
+
+
+
+
 
         // GET: ChatGroups/Create
         [Authorize]
@@ -208,6 +221,8 @@ namespace ToDoList.Controllers
 
             return RedirectToAction(nameof(Index));
         }
+
+
 
 
 

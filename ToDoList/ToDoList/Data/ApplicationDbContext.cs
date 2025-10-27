@@ -22,35 +22,39 @@ namespace ToDoList.Data
         {
             base.OnModelCreating(builder);
 
-            // Define composite key for GroupUser
+            //GroupUser Relations
+            //Create PK from 2 FK
             builder.Entity<GroupUser>()
                 .HasKey(gu => new { gu.UserId, gu.ChatGroupId });
 
-            // Relationships
+            
             builder.Entity<GroupUser>()
-                .HasOne(gu => gu.User)
-                .WithMany(u => u.GroupUsers)
-                .HasForeignKey(gu => gu.UserId);
+                .HasOne(u => u.User)
+                .WithMany(gu => gu.GroupUsers)
+                .HasForeignKey(u => u.UserId);
 
             builder.Entity<GroupUser>()
-                .HasOne(gu => gu.ChatGroup)
-                .WithMany(g => g.GroupUsers)
-                .HasForeignKey(gu => gu.ChatGroupId);
+                .HasOne(cg => cg.ChatGroup)
+                .WithMany(gu => gu.GroupUsers)
+                .HasForeignKey(cg => cg.ChatGroupId);
 
             //ChatMessage Relations
 
             builder.Entity<ChatMessage>()
-                .HasOne(gu => gu.Author)
-                .WithMany(u => u.ChatMessages)
-                .HasForeignKey(gu => gu.AuthorId);
+                .HasOne(a => a.Author)
+                .WithMany(cm => cm.ChatMessages)
+                .HasForeignKey(a => a.AuthorId);
 
             builder.Entity<ChatMessage>()
-                .HasOne(gu => gu.Group)
-                .WithMany(g => g.ChatMessages)
-                .HasForeignKey(gu => gu.GroupId);
+                .HasOne(g => g.Group)
+                .WithMany(gm => gm.ChatMessages)
+                .HasForeignKey(g => g.GroupId);
 
-
-
+            //ToDoTask Relations
+            builder.Entity<ToDoTask>()
+                .HasOne(cg => cg.ChatGroup)
+                .WithMany(td => td.ToDoTasks)
+                .HasForeignKey(cg => cg.ChatGroupId);
 
         }
 

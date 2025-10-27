@@ -93,3 +93,32 @@ h1{
     color:transparent;
     
 }
+
+
+.chatBody {
+    width: 100%;
+    display: flex;
+}
+
+.leftSide{
+    width: 40%; 
+    border: 1px solid black; 
+}
+
+.rightSide {
+    width: 60%; 
+    border: 1px solid black; 
+}
+
+.groupInfo {
+    height: 20%;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    word-wrap: break-word;
+}
+.groupNameButtons {
+    display: flex;
+    justify-content:end;
+}

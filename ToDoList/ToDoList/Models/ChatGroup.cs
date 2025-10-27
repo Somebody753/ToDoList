@@ -7,6 +7,7 @@
 
         public ICollection<GroupUser> GroupUsers { get; set; } = new List<GroupUser>();
         public ICollection<ChatMessage> ChatMessages { get; set; } = new List<ChatMessage>();
+        public ICollection<ToDoTask> ToDoTasks { get; set; } = new List<ToDoTask>();
 
         public ChatGroup()
         {

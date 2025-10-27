@@ -1,41 +1,81 @@
-﻿@model IEnumerable<ToDoList.Models.ChatGroup>
+﻿@using Microsoft.AspNetCore.Identity
+@inject UserManager<ApplicationUser> UserManager
+
+@model IEnumerable<ToDoList.Models.ChatGroup>
+
 
 @{
     ViewData["Title"] = "Index";
 }
 
+@{var userId = UserManager.GetUserId(User);}
+
 <h1>Index</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+
 <table class="table">
     <thead>
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.GroupName)
             </th>
-            <th></th>
+            <th>
+
+                <form asp-action="Create" method="get" style="display:inline">
+                    <input type="hidden" />
+                    <button type="submit" class="btn btn-outline-primary">
+                        ➕ Create new group
+                    </button>
+                </form>
+
+
+            </th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.GroupName)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-               
+        @foreach (var group in Model) {
 
-                    <form asp-action="JoinGroup" method="post" style="display:inline">
-                        <input type="hidden" name="id" value="@item.Id" />
+            bool isMember = group.GroupUsers.Any(u => u.UserId == userId);
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => group.GroupName)
+                </td>
+                <td>
+
+                    
+
+
+                    @if (!isMember)
+                    {
+                        <form asp-action="JoinGroup" method="post" style="display:inline">
+                            <input type="hidden" name="id" value="@group.Id" />
+                            <button type="submit" class="btn btn-success" )">
+                                Join
+                            </button>
+                        </form>
+                    }
+                    else
+                    {
+                        <form asp-action="Chat" asp-route-id="@group.Id" method="get" style="display:inline">
+                            <button type="submit" class="btn btn-primary" )">
+                                Chat and tasks
+                            </button>
+                        </form>
+                    }
+
+                    
+
+                    
+
+
+                    <form asp-action="Delete" asp-route-id="@group.Id" method="get" style="display:inline">
                         <button type="submit" class="btn btn-danger" )">
-                            Join
+                            Delete
                         </button>
                     </form>
+               
+
+
 
             </td>
         </tr>
