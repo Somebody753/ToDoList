@@ -8,166 +8,78 @@
         <h1>@Html.DisplayFor(model => model.GroupName)</h1>
     </div>
     <div class="groupNameButtons">
-    <form asp-action="Edit" asp-route-id="@Model?.Id" style="display:inline">
-        <button type="submit" class="btn btn-outline-info" )">
-            Edit
-        </button>
-    </form>
-    <form asp-action="Index" style="display:inline">
-        <button type="submit" class="btn btn-outline-light" )">
-            Back
-        </button>
-    </form>
+        <form asp-action="Index" method="get" style="display:inline">
+            <button type="submit" class="btn btn-success" )">
+                Back to List
+            </button>
+        </form>
+
+
     </div>
+
+    
 </div>
 
 <div class="chatBody">
-    <div class="leftSide">
-    
 
-        <div class="row p-1">
-            <div class="col-5"><input type="text" class="w-100" id="messageInput" /></div>
-        </div>
-        <div class="row p-1">
-            <div class="col-6 text-end">
-                <input type="hidden" id="groupId" value="@Model.Id" />
-
-                <input type="button" id="sendButton" value="Send Message" />
-            </div>
-        </div>
         <div class="row p-1">
             <div class="col-6">
                 <hr />
             </div>
         </div>
+
+       
+        
         <div class="row p-1">
-            <div class="col-6">
-                <ul id="messagesList"></ul>
+            <div class="scrollmenu" id="scrollmenu">
+                
+                    <ul id="messagesList"></ul>
+                
             </div>
         </div>
-    </div>
 
+        <div class="row p-1">
+            <div class="col-6">
+                <hr />
+            </div>
+        </div>
 
+        <div class="row p-1">
+            <div class="col-6"><input type="text" class="w-100" id="messageInput" /></div>
+        </div>
 
+        <div class="row p-1">
+            <div class="col-6 text-end">
+                <input type="hidden" id="groupId" value="@Model.Id" />
 
-
-
-
-    <div class="rightSide">
-
-        <table class="table table-striped " id="taskTable">
-            <thead>
-                <tr>
-                    <th onclick="sortTable(0)">Name</th>
-                    <th onclick="sortTable(1)">Details</th>
-                    <th onclick="sortTable(1)">Deadline</th>
-
-                    <th class="buttons">
-                        <a asp-action="Create" asp-controller="ToDoTasks" asp-route-groupId="@Model.Id" style="display:inline">
-                        
-                                ➕ Create new task
-                        
-                        </a>
-                    </th>
-
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var item in Model.ToDoTasks)
-                {
-
-                    <tr class="@(item.TaskDone ? "TaskNotDone" : "TaskDone")">
-
-                        <td>
-                            <p>@Html.DisplayFor(modelItem => item.TaskName)</p>
-
-                        </td>
-                        <td>
-                            <p>@Html.DisplayFor(modelItem => item.TaskDetails)</p>
-                        </td>
-
-                        <td class="@(((TimeSpan) (item.DeadlineDate - DateTime.Now)).Days switch{
-                    >= 1 => "long-time",
-                    >= 0 => "short-time",
-                    _ => "no-time"}) ">
-
-
-
-                            <p>@Html.DisplayFor(modelItem => item.DeadlineDate)</p>
-                        </td>
-
-
-                        <td>
-
-
-
-                            <form asp-action="Edit" asp-controller="ToDoTasks" asp-route-groupId="@Model.Id" method="get" style="display:inline">
-                                <input type="hidden" name="id" value="@item.Id" />
-                                <button type="submit" class="btn btn-outline-light">
-                                    Edit
-                                </button>
-                            </form>
-
-
-
-                            <form asp-action="ToggleDone" asp-controller="ToDoTasks" method="post" style="display:inline">
-                                <input type="hidden" name="id" value="@item.Id" />
-                                <input type="hidden" name="groupId" value="@Model.Id" />
-                                <button type="submit" class="btn @(item.TaskDone ? "btn-success" : "btn-outline-success")">
-                                    ✔
-                                </button>
-                            </form>
-
-
-
-                            <form asp-action="Delete" asp-controller="ToDoTasks" method="post" style="display:inline">
-                                <input type="hidden" name="id" value="@item.Id" />
-                                <input type="hidden" name="groupId" value="@Model.Id" />
-                                <button type="submit" class="btn btn-danger" )">
-                                    🗑️
-                                </button>
-                            </form>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                        </td>
-
-
-                    </tr>
-
-                }
-            </tbody>
-        </table>
-
-
-
-
-    </div>
+            <input type="button" class="btn btn-success" id="sendButton" value="Send Message" />
+            </div>
+        </div>
 </div>
 
 
+<h4>Online users</h4>
+<ul id="onlineUsers"></ul>
+    
 
 
-<script>
-    var groupId = "@Model.Id";
-</script>
+
+
+
+
 
 
 
 @section Scripts {
     <script src="~/js/signalr/dist/browser/signalr.js"></script>
     <script src="~/js/chat.js"></script>
+    <script>
+        document.getElementById("refresh_Btn").addEventListener("click", function () {
+            location.reload(); 
+        });
+    </script>
+
+    <script>
+        var groupId = "@Model.Id";
+    </script>
 }

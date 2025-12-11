@@ -3,28 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A75E32F3-11B1-438C-BBDD-7D959FA7F33E}|ToDoList\\ToDoList.csproj|c:\\users\\damia\\documents\\github\\todolist\\todolist\\todolist\\controllers\\todotaskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A75E32F3-11B1-438C-BBDD-7D959FA7F33E}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\controllers\\todotaskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A75E32F3-11B1-438C-BBDD-7D959FA7F33E}|ToDoList\\ToDoList.csproj|c:\\users\\damia\\documents\\github\\todolist\\todolist\\todolist\\views\\chatgroups\\chat.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A75E32F3-11B1-438C-BBDD-7D959FA7F33E}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\views\\chatgroups\\chat.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A75E32F3-11B1-438C-BBDD-7D959FA7F33E}|ToDoList\\ToDoList.csproj|c:\\users\\damia\\documents\\github\\todolist\\todolist\\todolist\\views\\todotasks\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A75E32F3-11B1-438C-BBDD-7D959FA7F33E}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\views\\todotasks\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A75E32F3-11B1-438C-BBDD-7D959FA7F33E}|ToDoList\\ToDoList.csproj|c:\\users\\damia\\documents\\github\\todolist\\todolist\\todolist\\wwwroot\\js\\chat.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A75E32F3-11B1-438C-BBDD-7D959FA7F33E}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\wwwroot\\js\\chat.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A75E32F3-11B1-438C-BBDD-7D959FA7F33E}|ToDoList\\ToDoList.csproj|c:\\users\\damia\\documents\\github\\todolist\\todolist\\todolist\\views\\chatgroups\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A75E32F3-11B1-438C-BBDD-7D959FA7F33E}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\views\\chatgroups\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A75E32F3-11B1-438C-BBDD-7D959FA7F33E}|ToDoList\\ToDoList.csproj|c:\\users\\damia\\documents\\github\\todolist\\todolist\\todolist\\services\\userconnectionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A75E32F3-11B1-438C-BBDD-7D959FA7F33E}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\services\\userconnectionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A75E32F3-11B1-438C-BBDD-7D959FA7F33E}|ToDoList\\ToDoList.csproj|c:\\users\\damia\\documents\\github\\todolist\\todolist\\todolist\\controllers\\chatgroupscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A75E32F3-11B1-438C-BBDD-7D959FA7F33E}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\controllers\\chatgroupscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A75E32F3-11B1-438C-BBDD-7D959FA7F33E}|ToDoList\\ToDoList.csproj|c:\\users\\damia\\documents\\github\\todolist\\todolist\\todolist\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A75E32F3-11B1-438C-BBDD-7D959FA7F33E}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A75E32F3-11B1-438C-BBDD-7D959FA7F33E}|ToDoList\\ToDoList.csproj|c:\\users\\damia\\documents\\github\\todolist\\todolist\\todolist\\views\\chatgroups\\chat.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A75E32F3-11B1-438C-BBDD-7D959FA7F33E}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\views\\chatgroups\\chat.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A75E32F3-11B1-438C-BBDD-7D959FA7F33E}|ToDoList\\ToDoList.csproj|c:\\users\\damia\\documents\\github\\todolist\\todolist\\todolist\\hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A75E32F3-11B1-438C-BBDD-7D959FA7F33E}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,32 +30,31 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\Views\\ToDoTasks\\Index.cshtml",
-              "RelativeDocumentMoniker": "ToDoList\\Views\\ToDoTasks\\Index.cshtml",
-              "ToolTip": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\Views\\ToDoTasks\\Index.cshtml",
-              "RelativeToolTip": "ToDoList\\Views\\ToDoTasks\\Index.cshtml",
-              "ViewState": "AgIAAFcAAAAAAAAAAADwv0wAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-27T13:06:11.735Z",
-              "EditorCaption": ""
+              "DocumentIndex": 4,
+              "Title": "ChatHub.cs",
+              "DocumentMoniker": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\Hubs\\ChatHub.cs",
+              "RelativeDocumentMoniker": "ToDoList\\Hubs\\ChatHub.cs",
+              "ToolTip": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\Hubs\\ChatHub.cs",
+              "RelativeToolTip": "ToDoList\\Hubs\\ChatHub.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAmwE0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T19:29:20.01Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "_LoginPartial.cshtml",
-              "DocumentMoniker": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\Views\\Shared\\_LoginPartial.cshtml",
-              "RelativeDocumentMoniker": "ToDoList\\Views\\Shared\\_LoginPartial.cshtml",
-              "ToolTip": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\Views\\Shared\\_LoginPartial.cshtml",
-              "RelativeToolTip": "ToDoList\\Views\\Shared\\_LoginPartial.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAkAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Chat.cshtml",
+              "DocumentMoniker": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\Views\\ChatGroups\\Chat.cshtml",
+              "RelativeDocumentMoniker": "ToDoList\\Views\\ChatGroups\\Chat.cshtml",
+              "ToolTip": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\Views\\ChatGroups\\Chat.cshtml",
+              "RelativeToolTip": "ToDoList\\Views\\ChatGroups\\Chat.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-25T23:31:13.771Z",
+              "WhenOpened": "2025-11-25T23:55:45.716Z",
               "EditorCaption": ""
             },
             {
@@ -70,48 +65,33 @@
               "RelativeDocumentMoniker": "ToDoList\\Controllers\\ChatGroupsController.cs",
               "ToolTip": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\Controllers\\ChatGroupsController.cs",
               "RelativeToolTip": "ToDoList\\Controllers\\ChatGroupsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAADwvyUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-25T11:14:03.435Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-25T18:55:05.632Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\Views\\ChatGroups\\Index.cshtml",
-              "RelativeDocumentMoniker": "ToDoList\\Views\\ChatGroups\\Index.cshtml",
-              "ToolTip": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\Views\\ChatGroups\\Index.cshtml",
-              "RelativeToolTip": "ToDoList\\Views\\ChatGroups\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-25T11:20:54.883Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ToDoTasksController.cs",
-              "DocumentMoniker": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\Controllers\\ToDoTasksController.cs",
-              "RelativeDocumentMoniker": "ToDoList\\Controllers\\ToDoTasksController.cs",
-              "ToolTip": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\Controllers\\ToDoTasksController.cs",
-              "RelativeToolTip": "ToDoList\\Controllers\\ToDoTasksController.cs",
-              "ViewState": "AgIAAMgAAAAAAAAAAAD4v84AAAAAAAAAAAAAAA==",
+              "Title": "UserConnectionManager.cs",
+              "DocumentMoniker": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\Services\\UserConnectionManager.cs",
+              "RelativeDocumentMoniker": "ToDoList\\Services\\UserConnectionManager.cs",
+              "ToolTip": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\Services\\UserConnectionManager.cs",
+              "RelativeToolTip": "ToDoList\\Services\\UserConnectionManager.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAzwCIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T14:04:47.284Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-25T16:30:01.752Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Chat.cshtml",
-              "DocumentMoniker": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\Views\\ChatGroups\\Chat.cshtml",
-              "RelativeDocumentMoniker": "ToDoList\\Views\\ChatGroups\\Chat.cshtml",
-              "ToolTip": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\Views\\ChatGroups\\Chat.cshtml",
-              "RelativeToolTip": "ToDoList\\Views\\ChatGroups\\Chat.cshtml",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAAAkAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-21T13:15:05.152Z"
+              "DocumentIndex": 1,
+              "Title": "chat.js",
+              "DocumentMoniker": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\wwwroot\\js\\chat.js",
+              "RelativeDocumentMoniker": "ToDoList\\wwwroot\\js\\chat.js",
+              "ToolTip": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\wwwroot\\js\\chat.js",
+              "RelativeToolTip": "ToDoList\\wwwroot\\js\\chat.js",
+              "ViewState": "AgIAACwAAAAAAAAAAAAQwBEAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-11-24T18:57:49.007Z"
             }
           ]
         }

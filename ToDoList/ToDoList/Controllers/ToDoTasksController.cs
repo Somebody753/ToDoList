@@ -27,7 +27,15 @@ namespace ToDoList.Controllers
         public async Task<IActionResult> Index(string chatgroupID)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            //chatgroupID = "f58528b2-82fe-484d-9197-53d5d13426a1";
+
+            bool isMember = await _context.GroupUser
+                .AnyAsync(gu => gu.ChatGroupId == chatgroupID && gu.UserId == userId);
+
+            if (!isMember)
+                return Forbid();
+
+
+
             var tasks = await _context.ToDoTask
                                       .Where(t => t.ChatGroupId == chatgroupID)
                                       .ToListAsync();
@@ -39,30 +47,23 @@ namespace ToDoList.Controllers
         }
 
 
-        // GET: ToDoTasks/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var toDoTask = await _context.ToDoTask
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (toDoTask == null)
-            {
-                return NotFound();
-            }
-
-
-            return View(toDoTask);
-        }
 
         // GET: ToDoTasks/Create
 
         [Authorize]
-        public IActionResult Create(string groupId)
+        public async Task<IActionResult> Create(string groupId)
         {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            bool isMember = await _context.GroupUser
+                .AnyAsync(gu => gu.ChatGroupId == groupId && gu.UserId == userId);
+
+            if (!isMember)
+                return Forbid();
+
+
+
+
             var task = new ToDoTask
             {
                 ChatGroupId = groupId 
@@ -87,7 +88,7 @@ namespace ToDoList.Controllers
 
                 _context.Add(toDoTask);
                 await _context.SaveChangesAsync();
-                return RedirectToAction("Chat", "ChatGroups", new { id = groupId });
+                return RedirectToAction("GroupTasks", "ChatGroups", new { id = groupId });
             }
 
             if (!ModelState.IsValid)
@@ -98,7 +99,7 @@ namespace ToDoList.Controllers
                 }
             }
 
-            return RedirectToAction("Chat", "ChatGroups", new { id = groupId });
+            return RedirectToAction("GroupTasks", "ChatGroups", new { id = groupId });
         }
 
 
@@ -110,6 +111,17 @@ namespace ToDoList.Controllers
         [Authorize]
         public async Task<IActionResult> Edit(int? id, string groupId)
         {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            bool isMember = await _context.GroupUser
+                .AnyAsync(gu => gu.ChatGroupId == groupId && gu.UserId == userId);
+
+            if (!isMember)
+                return Forbid();
+
+
+
+
             if (id == null)
             {
                 return NotFound();
@@ -158,7 +170,7 @@ namespace ToDoList.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction("Chat", "ChatGroups", new { id = groupId });
+                return RedirectToAction("GroupTasks", "ChatGroups", new { id = groupId });
             }
             return View(toDoTask);
         }
@@ -189,6 +201,18 @@ namespace ToDoList.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id, string groupId)
         {
+
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            bool isMember = await _context.GroupUser
+                .AnyAsync(gu => gu.ChatGroupId == groupId && gu.UserId == userId);
+
+            if (!isMember)
+                return Forbid();
+
+
+
+
             var toDoTask = await _context.ToDoTask.FindAsync(id);
             if (toDoTask != null)
             {
@@ -196,7 +220,7 @@ namespace ToDoList.Controllers
             }
 
             await _context.SaveChangesAsync();
-            return RedirectToAction("Chat", "ChatGroups", new { id = groupId });
+            return RedirectToAction("GroupTasks", "ChatGroups", new { id = groupId });
         }
 
 
@@ -213,6 +237,14 @@ namespace ToDoList.Controllers
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
+            bool isMember = await _context.GroupUser
+                .AnyAsync(gu => gu.ChatGroupId == groupId && gu.UserId == userId);
+
+            if (!isMember)
+                return Forbid();
+
+
+
             var task = await _context.ToDoTask
                 .FirstOrDefaultAsync(t => t.Id == id);
 
@@ -224,7 +256,7 @@ namespace ToDoList.Controllers
             task.TaskDone = !task.TaskDone; // flip the status
             await _context.SaveChangesAsync();
 
-            return RedirectToAction("Chat", "ChatGroups", new { id = groupId });
+            return RedirectToAction("GroupTasks", "ChatGroups", new { id = groupId });
         }
 
 

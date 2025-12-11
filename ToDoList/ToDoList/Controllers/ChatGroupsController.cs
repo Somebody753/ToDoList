@@ -4,22 +4,44 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ToDoList.Data;
 using ToDoList.Models;
+using ToDoList.Services;
 
 namespace ToDoList.Controllers
 {
     public class ChatGroupsController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly UserConnectionManager _users;
 
-        public ChatGroupsController(ApplicationDbContext context)
+
+
+
+
+
+        public ChatGroupsController(ApplicationDbContext context, UserConnectionManager users)
         {
             _context = context;
+            _users = users;
         }
+
+        [HttpGet]
+        public IActionResult GetOnlineUsers(string groupId)
+        {
+            var users = _users.GetOnlineUsers(groupId);
+            return Json(users);
+        }
+
+
+
+
+
+
 
         // GET: ChatGroups
         [Authorize]
@@ -44,6 +66,58 @@ namespace ToDoList.Controllers
                 return NotFound();
             }
 
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            bool isMember = await _context.GroupUser
+                .AnyAsync(gu => gu.ChatGroupId == id && gu.UserId == userId);
+
+            if (!isMember)
+                return Forbid();
+
+
+
+
+
+
+
+
+            var chatGroup = await _context.ChatGroup
+                .Include(g => g.ToDoTasks)
+                .FirstOrDefaultAsync(m => m.Id == id);
+
+
+            if (chatGroup == null)
+            {
+                return NotFound();
+            }
+
+            return View(chatGroup);
+        }
+
+
+        [Authorize]
+        public async Task<IActionResult> GroupTasks(string id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            bool isMember = await _context.GroupUser
+                .AnyAsync(gu => gu.ChatGroupId == id && gu.UserId == userId);
+
+            if (!isMember)
+                return Forbid();
+
+
+
+
+
+
+
             var chatGroup = await _context.ChatGroup
                 .Include(g => g.ToDoTasks)
                 .FirstOrDefaultAsync(m => m.Id == id);
@@ -54,9 +128,6 @@ namespace ToDoList.Controllers
 
             return View(chatGroup);
         }
-
-
-
 
 
 
@@ -99,6 +170,20 @@ namespace ToDoList.Controllers
         [Authorize]
         public async Task<IActionResult> Edit(string id)
         {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            bool isMember = await _context.GroupUser
+                .AnyAsync(gu => gu.ChatGroupId == id && gu.UserId == userId);
+
+            if (!isMember)
+                return Forbid();
+
+
+
+
+
+
+
             if (id == null)
             {
                 return NotFound();
@@ -152,6 +237,8 @@ namespace ToDoList.Controllers
         [Authorize]
         public async Task<IActionResult> Delete(string id)
         {
+
+
             if (id == null)
             {
                 return NotFound();
@@ -173,6 +260,20 @@ namespace ToDoList.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
+
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            bool isMember = await _context.GroupUser
+                .AnyAsync(gu => gu.ChatGroupId == id && gu.UserId == userId);
+
+            if (!isMember)
+                return Forbid();
+
+
+
+
+
+
             var chatGroup = await _context.ChatGroup.FindAsync(id);
             if (chatGroup != null)
             {
@@ -221,6 +322,38 @@ namespace ToDoList.Controllers
 
             return RedirectToAction(nameof(Index));
         }
+
+
+
+        //LEAVE GROUP
+
+        [Authorize]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> LeaveGroup(string id)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var groupUser = await _context.GroupUser
+            .FirstOrDefaultAsync(gu => gu.UserId == userId && gu.ChatGroupId == id.ToString());
+
+
+
+            if (groupUser != null)
+            {
+                _context.GroupUser.Remove(groupUser);
+                await _context.SaveChangesAsync();
+                
+            }
+
+            
+                
+
+            
+
+            return RedirectToAction(nameof(Index));
+        }
+
 
 
 

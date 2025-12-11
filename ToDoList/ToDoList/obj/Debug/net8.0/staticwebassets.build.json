@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zUKd5/q08rAIY5NVPNr0chZ4rglJIJ5d3039BOGhrzo=",
+  "Hash": "+sdUFrLnrUsVGQxhGio+DozFdWMzSe9cjvmeLYf6NLU=",
   "Source": "ToDoList",
   "BasePath": "_content/ToDoList",
   "Mode": "Default",
@@ -1333,8 +1333,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "zs2djeyw2c",
-      "Integrity": "jaXw9LWpvVTy0hKqlO9nMcn5V9KHSYrw8NgldOsjIAc=",
+      "Fingerprint": "9u9xhxz299",
+      "Integrity": "ETVT8umtPTN3QebE/DKNPRXzzbpw6XrFaVgtqvqVcYg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -1375,8 +1375,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "sgc4zt9ref",
-      "Integrity": "HP9KVbG2vdplc7TI92RM0IvD1jEe+bFyHhsApzzlBxE=",
+      "Fingerprint": "vxa1picxyy",
+      "Integrity": "XdEZQBkjusCtkFrGrjsZV2AWe9EFh36dElRwvG0qgbg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\chat.js"
@@ -2644,6 +2644,51 @@
   ],
   "Endpoints": [
     {
+      "Route": "css/site.9u9xhxz299.css",
+      "AssetFile": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1615"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ETVT8umtPTN3QebE/DKNPRXzzbpw6XrFaVgtqvqVcYg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 20 Nov 2025 14:25:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9u9xhxz299"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ETVT8umtPTN3QebE/DKNPRXzzbpw6XrFaVgtqvqVcYg="
+        }
+      ]
+    },
+    {
       "Route": "css/site.css",
       "AssetFile": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\wwwroot\\css\\site.css",
       "Selectors": [],
@@ -2654,7 +2699,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1757"
+          "Value": "1615"
         },
         {
           "Name": "Content-Type",
@@ -2662,11 +2707,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"jaXw9LWpvVTy0hKqlO9nMcn5V9KHSYrw8NgldOsjIAc=\""
+          "Value": "\"ETVT8umtPTN3QebE/DKNPRXzzbpw6XrFaVgtqvqVcYg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 25 Oct 2025 10:33:37 GMT"
+          "Value": "Thu, 20 Nov 2025 14:25:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2676,52 +2721,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-jaXw9LWpvVTy0hKqlO9nMcn5V9KHSYrw8NgldOsjIAc="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.zs2djeyw2c.css",
-      "AssetFile": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\wwwroot\\css\\site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1757"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"jaXw9LWpvVTy0hKqlO9nMcn5V9KHSYrw8NgldOsjIAc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 25 Oct 2025 10:33:37 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "zs2djeyw2c"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-jaXw9LWpvVTy0hKqlO9nMcn5V9KHSYrw8NgldOsjIAc="
+          "Value": "sha256-ETVT8umtPTN3QebE/DKNPRXzzbpw6XrFaVgtqvqVcYg="
         }
       ]
     },
@@ -5038,7 +5038,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1296"
+          "Value": "2058"
         },
         {
           "Name": "Content-Type",
@@ -5046,11 +5046,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"HP9KVbG2vdplc7TI92RM0IvD1jEe+bFyHhsApzzlBxE=\""
+          "Value": "\"XdEZQBkjusCtkFrGrjsZV2AWe9EFh36dElRwvG0qgbg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 30 Sep 2025 12:00:35 GMT"
+          "Value": "Tue, 25 Nov 2025 23:54:35 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5060,12 +5060,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-HP9KVbG2vdplc7TI92RM0IvD1jEe+bFyHhsApzzlBxE="
+          "Value": "sha256-XdEZQBkjusCtkFrGrjsZV2AWe9EFh36dElRwvG0qgbg="
         }
       ]
     },
     {
-      "Route": "js/chat.sgc4zt9ref.js",
+      "Route": "js/chat.vxa1picxyy.js",
       "AssetFile": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\wwwroot\\js\\chat.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -5075,7 +5075,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1296"
+          "Value": "2058"
         },
         {
           "Name": "Content-Type",
@@ -5083,11 +5083,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"HP9KVbG2vdplc7TI92RM0IvD1jEe+bFyHhsApzzlBxE=\""
+          "Value": "\"XdEZQBkjusCtkFrGrjsZV2AWe9EFh36dElRwvG0qgbg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 30 Sep 2025 12:00:35 GMT"
+          "Value": "Tue, 25 Nov 2025 23:54:35 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5097,7 +5097,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "sgc4zt9ref"
+          "Value": "vxa1picxyy"
         },
         {
           "Name": "label",
@@ -5105,7 +5105,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-HP9KVbG2vdplc7TI92RM0IvD1jEe+bFyHhsApzzlBxE="
+          "Value": "sha256-XdEZQBkjusCtkFrGrjsZV2AWe9EFh36dElRwvG0qgbg="
         }
       ]
     },

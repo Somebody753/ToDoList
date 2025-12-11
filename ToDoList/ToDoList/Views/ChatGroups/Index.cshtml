@@ -16,7 +16,7 @@
 <table class="table">
     <thead>
         <tr>
-            <th>
+            <th style="width:78%">
                 @Html.DisplayNameFor(model => model.GroupName)
             </th>
             <th>
@@ -58,24 +58,27 @@
                     {
                         <form asp-action="Chat" asp-route-id="@group.Id" method="get" style="display:inline">
                             <button type="submit" class="btn btn-primary" )">
-                                Chat and tasks
+                                Chat
                             </button>
                         </form>
+
+                        <form asp-action="GroupTasks" asp-route-id="@group.Id" method="get" style="display:inline">
+                            <button type="submit" class="btn btn-primary" )">
+                                Group Tasks
+                            </button>
+                        </form>
+
+                        <form asp-action="LeaveGroup" method="post" style="display:inline">
+                            <input type="hidden" name="id" value="@group.Id" />
+                            <button type="submit" class="btn btn-outline-danger" )">
+                                Leave
+                            </button>
+                        </form>
+
+
                     }
 
                     
-
-                    
-
-
-                    <form asp-action="Delete" asp-route-id="@group.Id" method="get" style="display:inline">
-                        <button type="submit" class="btn btn-danger" )">
-                            Delete
-                        </button>
-                    </form>
-               
-
-
 
             </td>
         </tr>

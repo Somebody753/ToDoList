@@ -7,7 +7,12 @@
 <h1>Edit Task</h1>
 
 
-<h4>ToDoTask</h4>
+<form asp-action="GroupTasks" asp-controller="ChatGroups" asp-route-id="@Model.ChatGroupId" method="get" style="display:inline">
+    <button type="submit" class="btn btn-outline-light" )">
+        Back to list
+    </button>
+</form>
+
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Edit" method="post">
@@ -46,10 +51,6 @@
     </div>
 </div>
 
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
