@@ -69,9 +69,9 @@ namespace ToDoList.Controllers
                 return Forbid();
 
             var chatGroup = await _context.ChatGroup
-                .Include(g => g.ToDoTasks)
+                .Include(g => g.ChatMessages)
+                .ThenInclude(m => m.Author)
                 .FirstOrDefaultAsync(m => m.Id == id);
-
 
             return View(chatGroup);
         }
