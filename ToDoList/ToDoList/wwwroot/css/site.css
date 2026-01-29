@@ -9,7 +9,8 @@ html {
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #002247;
+
 }
 
 html {
@@ -19,7 +20,8 @@ html {
 
 body {
     margin-bottom: 60px;
-    background-color:azure;
+    background-color:black;
+    color:azure;
 }
 
 .container-fluid {
@@ -32,10 +34,10 @@ body {
 
 .header {
     width: 80%;
-    height:100px;
+    height: 100px;
     margin: auto;
     border-radius: 25px;
-
+    background-color: black;
 }
 
 .TaskDone p {
@@ -49,13 +51,19 @@ body {
 }
 
 td {
-    word-wrap: break-word; /* Break long words */
-    white-space: normal; /* Allow text to wrap */
+    word-wrap: break-word; 
+    white-space: normal; 
+    color:azure;
+}
+
+th {
+    color: azure;
 }
 
 table {
     table-layout: fixed; /* Prevents cells from stretching */
-    background-color:azure;
+    background-color:black;
+    color:azure;
 }
 
 .navbar {
@@ -79,8 +87,32 @@ th:hover {
     cursor: pointer;
 }
 
-h1{
-    background: linear-gradient(to right,purple,orange);
-    background-clip: text;
-    color:transparent;
+
+
+.chatBody {
+    width: 100%;
+    height: 40em;
+}
+
+
+.groupInfo {
+    height: 20%;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    word-wrap: break-word;
+}
+.groupNameButtons {
+    display: flex;
+    justify-content:end;
+}
+
+
+div.scrollmenu {
+    overflow: auto;
+    white-space: nowrap;
+    height: 30em;
+    width: 45em;
+    
 }

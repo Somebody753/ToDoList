@@ -1,0 +1,95 @@
+﻿@model ToDoList.Models.ChatGroup
+
+@{
+    ViewData["Title"] = "Details";
+}
+<div class="groupInfo">
+    <div class="chatGroupName">
+        <h1>@Html.DisplayFor(model => model.GroupName)</h1>
+    </div>
+    <div class="groupNameButtons">
+        <form asp-action="Index" method="get" style="display:inline">
+            <button type="submit" class="btn btn-success" )">
+                Back to List
+            </button>
+        </form>
+
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+<div class="chatBody">
+
+        <div class="row p-1">
+            <div class="col-6">
+                <hr />
+            </div>
+        </div>
+
+       
+        
+        <div class="row p-1">
+            <div class="scrollmenu" id="scrollmenu">
+                
+                <ul id="messagesList">
+                    <!-- showing all messages from last 15 minutes  -->
+                @foreach (var item in Model.ChatMessages)
+                {
+                    @if (((TimeSpan)(DateTime.Now - item.Timestamp)).TotalHours < 2)
+                    {
+                        <li>@item.Timestamp.ToString() @item.Author.Email: @item.MessageText</li>
+                    }
+                }
+
+
+
+                </ul>
+                
+            </div>
+        </div>
+
+        <div class="row p-1">
+            <div class="col-6">
+                <hr />
+            </div>
+        </div>
+
+        <div class="row p-1">
+            <div class="col-6"><input type="text" class="w-100" id="messageInput" /></div>
+        </div>
+
+        <div class="row p-1">
+            <div class="col-6 text-end">
+                <input type="hidden" id="groupId" value="@Model.Id" />
+
+            <input type="button" class="btn btn-success" id="sendButton" value="Send Message" />
+            </div>
+        </div>
+</div>
+
+
+
+
+
+
+
+@section Scripts {
+    <script src="~/js/signalr/dist/browser/signalr.js"></script>
+    <script src="~/js/chat.js"></script>
+    <script>
+        document.getElementById("refresh_Btn").addEventListener("click", function () {
+            location.reload(); 
+        });
+    </script>
+
+    <script>
+        var groupId = "@Model.Id";
+    </script>
+}

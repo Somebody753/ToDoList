@@ -26,7 +26,9 @@
     </thead>
     <tbody>
 @foreach (var item in Model) {
-        
+
+
+
             <tr class="@(item.TaskDone ? "TaskNotDone" : "TaskDone")">
            
             <td >
@@ -36,11 +38,14 @@
             <td>
                     <p>@Html.DisplayFor(modelItem => item.TaskDetails)</p>
             </td>
-
-                <td class="@(((TimeSpan)(DateTime.ParseExact(item.DeadlineDate, "yyyy-MM-dd", CultureInfo.InvariantCulture) - DateTime.Now)).Days switch{
-                >= 3 => "long-time",
-                >= 1 => "short-time",
+            <!-- The color of task changes depending on the time left --> 
+                <td class="@(((TimeSpan) (item.DeadlineDate - DateTime.Now)).Days switch{
+                >= 1 => "long-time",
+                >= 0 => "short-time",
                 _ => "no-time"}) ">
+
+
+                    
                     <p>@Html.DisplayFor(modelItem => item.DeadlineDate)</p>
                 </td>
 
@@ -51,7 +56,7 @@
 
                     <form asp-action="Edit" method="get" style="display:inline">
                         <input type="hidden" name="id" value="@item.Id" />
-                        <button type="submit" class="btn btn-outline-dark">
+                        <button type="submit" class="btn btn-outline-light">
                             Edit
                         </button>
                     </form>
