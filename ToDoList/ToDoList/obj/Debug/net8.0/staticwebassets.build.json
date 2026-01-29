@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+sdUFrLnrUsVGQxhGio+DozFdWMzSe9cjvmeLYf6NLU=",
+  "Hash": "kqMUP9CCrYgkZIOuuUeFZiWso2crmr2hctFTN5EUuGA=",
   "Source": "ToDoList",
   "BasePath": "_content/ToDoList",
   "Mode": "Default",
@@ -1375,8 +1375,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "vxa1picxyy",
-      "Integrity": "XdEZQBkjusCtkFrGrjsZV2AWe9EFh36dElRwvG0qgbg=",
+      "Fingerprint": "mra7buuvft",
+      "Integrity": "vgrxHZ3arizyBEl99WzXcf9XkTrScZ8vhLWliCH35OU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\chat.js"
@@ -5038,7 +5038,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2058"
+          "Value": "1744"
         },
         {
           "Name": "Content-Type",
@@ -5046,11 +5046,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"XdEZQBkjusCtkFrGrjsZV2AWe9EFh36dElRwvG0qgbg=\""
+          "Value": "\"vgrxHZ3arizyBEl99WzXcf9XkTrScZ8vhLWliCH35OU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 25 Nov 2025 23:54:35 GMT"
+          "Value": "Tue, 27 Jan 2026 22:30:56 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5060,12 +5060,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-XdEZQBkjusCtkFrGrjsZV2AWe9EFh36dElRwvG0qgbg="
+          "Value": "sha256-vgrxHZ3arizyBEl99WzXcf9XkTrScZ8vhLWliCH35OU="
         }
       ]
     },
     {
-      "Route": "js/chat.vxa1picxyy.js",
+      "Route": "js/chat.mra7buuvft.js",
       "AssetFile": "C:\\Users\\damia\\Documents\\GitHub\\ToDoList\\ToDoList\\ToDoList\\wwwroot\\js\\chat.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -5075,7 +5075,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2058"
+          "Value": "1744"
         },
         {
           "Name": "Content-Type",
@@ -5083,11 +5083,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"XdEZQBkjusCtkFrGrjsZV2AWe9EFh36dElRwvG0qgbg=\""
+          "Value": "\"vgrxHZ3arizyBEl99WzXcf9XkTrScZ8vhLWliCH35OU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 25 Nov 2025 23:54:35 GMT"
+          "Value": "Tue, 27 Jan 2026 22:30:56 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5097,7 +5097,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "vxa1picxyy"
+          "Value": "mra7buuvft"
         },
         {
           "Name": "label",
@@ -5105,7 +5105,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-XdEZQBkjusCtkFrGrjsZV2AWe9EFh36dElRwvG0qgbg="
+          "Value": "sha256-vgrxHZ3arizyBEl99WzXcf9XkTrScZ8vhLWliCH35OU="
         }
       ]
     },

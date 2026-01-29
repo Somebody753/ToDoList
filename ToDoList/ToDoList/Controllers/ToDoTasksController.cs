@@ -99,7 +99,7 @@ namespace ToDoList.Controllers
                 }
             }
 
-            return RedirectToAction("GroupTasks", "ChatGroups", new { id = groupId });
+            return RedirectToAction("GroupTasks", "ChatGroups", new { id = groupId });//redirecting back to group
         }
 
 
@@ -170,7 +170,7 @@ namespace ToDoList.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction("GroupTasks", "ChatGroups", new { id = groupId });
+                return RedirectToAction("GroupTasks", "ChatGroups", new { id = groupId });//redirecting back to group
             }
             return View(toDoTask);
         }
@@ -220,7 +220,7 @@ namespace ToDoList.Controllers
             }
 
             await _context.SaveChangesAsync();
-            return RedirectToAction("GroupTasks", "ChatGroups", new { id = groupId });
+            return RedirectToAction("GroupTasks", "ChatGroups", new { id = groupId });//redirecting back to group
         }
 
 
@@ -229,7 +229,7 @@ namespace ToDoList.Controllers
 
 
 
-
+        //Switching boolean TaskDone, only can be done by member
         [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -253,10 +253,10 @@ namespace ToDoList.Controllers
                 return NotFound();
             }
 
-            task.TaskDone = !task.TaskDone; // flip the status
+            task.TaskDone = !task.TaskDone; 
             await _context.SaveChangesAsync();
 
-            return RedirectToAction("GroupTasks", "ChatGroups", new { id = groupId });
+            return RedirectToAction("GroupTasks", "ChatGroups", new { id = groupId });//redirecting back to group
         }
 
 

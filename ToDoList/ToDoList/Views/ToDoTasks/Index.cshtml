@@ -38,7 +38,7 @@
             <td>
                     <p>@Html.DisplayFor(modelItem => item.TaskDetails)</p>
             </td>
-
+            <!-- The color of task changes depending on the time left --> 
                 <td class="@(((TimeSpan) (item.DeadlineDate - DateTime.Now)).Days switch{
                 >= 1 => "long-time",
                 >= 0 => "short-time",

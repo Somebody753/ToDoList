@@ -10,32 +10,26 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ToDoList.Data;
 using ToDoList.Models;
-using ToDoList.Services;
+
 
 namespace ToDoList.Controllers
 {
     public class ChatGroupsController : Controller
     {
         private readonly ApplicationDbContext _context;
-        private readonly UserConnectionManager _users;
 
 
 
 
 
 
-        public ChatGroupsController(ApplicationDbContext context, UserConnectionManager users)
+
+        public ChatGroupsController(ApplicationDbContext context)
         {
             _context = context;
-            _users = users;
+
         }
 
-        [HttpGet]
-        public IActionResult GetOnlineUsers(string groupId)
-        {
-            var users = _users.GetOnlineUsers(groupId);
-            return Json(users);
-        }
 
 
 
@@ -74,27 +68,17 @@ namespace ToDoList.Controllers
             if (!isMember)
                 return Forbid();
 
-
-
-
-
-
-
-
             var chatGroup = await _context.ChatGroup
                 .Include(g => g.ToDoTasks)
                 .FirstOrDefaultAsync(m => m.Id == id);
 
 
-            if (chatGroup == null)
-            {
-                return NotFound();
-            }
-
             return View(chatGroup);
         }
 
 
+
+        //GET: ChatGroups/GroupTasks/5
         [Authorize]
         public async Task<IActionResult> GroupTasks(string id)
         {
@@ -113,11 +97,6 @@ namespace ToDoList.Controllers
                 return Forbid();
 
 
-
-
-
-
-
             var chatGroup = await _context.ChatGroup
                 .Include(g => g.ToDoTasks)
                 .FirstOrDefaultAsync(m => m.Id == id);
@@ -128,11 +107,6 @@ namespace ToDoList.Controllers
 
             return View(chatGroup);
         }
-
-
-
-
-
 
 
 
@@ -179,11 +153,6 @@ namespace ToDoList.Controllers
                 return Forbid();
 
 
-
-
-
-
-
             if (id == null)
             {
                 return NotFound();
@@ -198,8 +167,6 @@ namespace ToDoList.Controllers
         }
 
         // POST: ChatGroups/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -233,6 +200,8 @@ namespace ToDoList.Controllers
             return View(chatGroup);
         }
 
+
+        // Delete Group
         // GET: ChatGroups/Delete/5
         [Authorize]
         public async Task<IActionResult> Delete(string id)
@@ -254,6 +223,8 @@ namespace ToDoList.Controllers
             return View(chatGroup);
         }
 
+
+        //Deleting chat group, only works if user is member of that group
         // POST: ChatGroups/Delete/5
         [Authorize]
         [HttpPost, ActionName("Delete")]
@@ -269,11 +240,6 @@ namespace ToDoList.Controllers
             if (!isMember)
                 return Forbid();
 
-
-
-
-
-
             var chatGroup = await _context.ChatGroup.FindAsync(id);
             if (chatGroup != null)
             {
@@ -284,6 +250,8 @@ namespace ToDoList.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+
+        //function that checks if group exist
         private bool ChatGroupExists(string id)
         {
             return _context.ChatGroup.Any(e => e.Id == id);
@@ -293,7 +261,7 @@ namespace ToDoList.Controllers
 
 
 
-
+        //joining group
         [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -325,7 +293,7 @@ namespace ToDoList.Controllers
 
 
 
-        //LEAVE GROUP
+        //leaving group
 
         [Authorize]
         [HttpPost]
@@ -338,18 +306,12 @@ namespace ToDoList.Controllers
             .FirstOrDefaultAsync(gu => gu.UserId == userId && gu.ChatGroupId == id.ToString());
 
 
-
             if (groupUser != null)
             {
                 _context.GroupUser.Remove(groupUser);
                 await _context.SaveChangesAsync();
                 
             }
-
-            
-                
-
-            
 
             return RedirectToAction(nameof(Index));
         }

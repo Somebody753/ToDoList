@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using ToDoList.Hubs;
 using ToDoList.Data;
 using ToDoList.Models;
-using ToDoList.Services;
+
 
 namespace ToDoList
 {
@@ -23,8 +23,7 @@ namespace ToDoList
             options.SignIn.RequireConfirmedAccount = true)
             .AddEntityFrameworkStores<ApplicationDbContext>();
             builder.Services.AddControllersWithViews();
-            builder.Services.AddSignalR();
-            builder.Services.AddSingleton<UserConnectionManager>();
+            builder.Services.AddSignalR();//SignalR 
 
 
             var app = builder.Build();
